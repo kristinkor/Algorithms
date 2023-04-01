@@ -3,6 +3,7 @@ public class ShortestDistanceToTarget {
      int left= 0; int right=0;
      int l = words.length;
         for(int i = startIndex; true; i = (i+1) % l) {
+            System.out.println(i);
             if(right == l) {
                 return -1;
             }
@@ -12,8 +13,9 @@ public class ShortestDistanceToTarget {
                 right++;
             }
         }
-
+        System.out.println("fff");
         for(int i = startIndex; true; i = (i-1+l) % l) {
+            System.out.println(i);
             if(words[i].equals(target)) {
                 break;
             } else {
