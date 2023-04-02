@@ -18,6 +18,23 @@ public class DuplicateZeros {
         }
     }
 
+    public int maxPower(String s) {
+        int temp = 1, max = 1;
+        char c = s.charAt(0);
+        for (int i = 1; i < s.length(); i++) {
+            if (c == (s.charAt(i))) {
+                temp += 1;
+                if (temp > max) {
+                    max = temp;
+                }
+            } else {
+                c = s.charAt(i);
+                temp = 1;
+            }
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 5, 2, 0, 6, 8, 0, 6, 0};
         duplicateZeros(arr);
