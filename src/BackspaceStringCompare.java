@@ -3,9 +3,7 @@ import java.util.Stack;
 public class BackspaceStringCompare {
     public static boolean backspaceCompare(String s, String t) {
 
-        if (s.length() != t.length()) {
-            return false;
-        }
+
         Stack<Character> stack1 = new Stack<Character>();
         Stack<Character> stack2 = new Stack<Character>();
 
